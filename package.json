@@ -1,0 +1,32 @@
+{
+  "name": "finn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FINN - Financial Investment Agent. Mobile-first push/pull investor intelligence layer (ENAM AI Engineer Build Challenge).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "snapshot": "node scripts/snapshot.mjs"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0",
+    "lucide-react": "1.65.0",
+    "next": "15.5.28",
+    "react": "19.2.9",
+    "react-dom": "19.2.9"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "autoprefixer": "10.6.2",
+    "postcss": "8.5.32",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3"
+  }
+}

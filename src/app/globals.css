@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-outer: #000000;
+  --bg-app: #09090b;
+}
+
+html,
+body {
+  background: var(--bg-outer);
+}
+
+body {
+  @apply text-zinc-100 antialiased;
+  font-feature-settings: 'tnum' 1, 'cv11' 1;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Desktop: frame the phone-width app on a subtle stage. */
+@media (min-width: 640px) {
+  body {
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(245, 184, 61, 0.06), transparent 60%),
+      var(--bg-outer);
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-zinc-800/80 bg-zinc-900/60;
+  }
+  .label {
+    @apply text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500;
+  }
+  .num {
+    @apply font-mono tabular-nums;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors;
+  }
+  .tap {
+    @apply transition active:scale-[0.98];
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom), 8px);
+  }
+  .shimmer {
+    background: linear-gradient(90deg, rgba(39, 39, 42, 0.6) 0%, rgba(63, 63, 70, 0.6) 50%, rgba(39, 39, 42, 0.6) 100%);
+    background-size: 200% 100%;
+    @apply animate-shimmer;
+  }
+}
+
+/* Range sliders (Triggers view) */
+input[type='range'].finn-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  background: transparent;
+  touch-action: pan-y;
+}
+input[type='range'].finn-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #f5b83d var(--fill, 50%), #27272a var(--fill, 50%));
+}
+input[type='range'].finn-range::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: #27272a;
+}
+input[type='range'].finn-range::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: #f5b83d;
+}
+input[type='range'].finn-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  margin-top: -9px;
+  border-radius: 999px;
+  background: #fafafa;
+  border: 3px solid #f5b83d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+input[type='range'].finn-range::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 999px;
+  background: #fafafa;
+  border: 3px solid #f5b83d;
+}
+input[type='range'].finn-range:focus-visible {
+  outline: none;
+}
+input[type='range'].finn-range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(245, 184, 61, 0.35);
+}
