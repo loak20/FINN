@@ -97,7 +97,7 @@
   Ran 1 shell command (ctrl+o to expand)
 
 ⏺ Versions are settled (Next 15.5.28, React 19.2.9, cheerio 1.2.0, Tailwind
-  3.4.19, TypeScript 5.9.3). I'll scaffold the project in ENAM_Kadam/finn/,
+  3.4.19, TypeScript 5.9.3). I'll scaffold the project in ENAM/finn/,
   excluding the challenge PDFs from the repo, and kick off npm install in the
   background while continuing to write code.
 
@@ -1983,7 +1983,7 @@ completed (exit code 0)
   public/ folder, which Next doesn't need and git wouldn't track.
   Ran 1 shell command (ctrl+o to expand)
 
-⏺ I've built FINN as specified in the .md file. It's in ENAM_Kadam/finn/: about
+⏺ I've built FINN as specified in the .md file. It's in ENAM/finn/: about
   7,200 lines across 50 files, with no TODOs. The code is written straight to
   disk rather than pasted here, and finn/README.md repeats the guide below.
 
@@ -2054,7 +2054,7 @@ completed (exit code 0)
       └── types/finn.ts
 
   2. Local setup (everything stays inside the project)
-  cd ~/Desktop/ENAM_Kadam/finn
+  cd ~/Desktop/ENAM/finn
   npm install                  # installs into ./node_modules only; nothing 
   global
   cp .env.example .env.local   # optional: GEMINI_API_KEY=... 
@@ -2091,4 +2091,4 @@ completed (exit code 0)
 
 ✻ Sautéed for 54m 1s · done 10:13 PM
 
-※ recap: The FINN app from your build spec is finished in ENAM_Kadam/finn, and the production build passes on live data. Next, add your Gemini key and test one Narrative vs. Numbers audit, then follow the README to deploy on Vercel. (disable recaps in /config)
+※ recap: The FINN app from your build spec is finished in ENAM/finn, and the production build passes on live data. Next, add your Gemini key and test one Narrative vs. Numbers audit, then follow the README to deploy on Vercel. (disable recaps in /config)
